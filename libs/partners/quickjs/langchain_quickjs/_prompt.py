@@ -43,7 +43,9 @@ _FS_SYSTEM_PROMPT_TEMPLATE = """
 It behaves like Node's `fs`, and every call goes through your file tools, so \
 the same rules and approvals apply. Each sync function, such as \
 `fs.readFileSync`, has a promise form, such as `fs.promises.readFile`, to use \
-with `Promise.all`. Paths are absolute; relative paths resolve from `/`.
+with `Promise.all`. `require("fs")`, `require("path")`, and \
+`await import("node:fs/promises")` also work; static `import` statements do \
+not. Paths are absolute; relative paths resolve from `/`.
 
 {functions}
 - Errors are Node errors: check `err.code`, such as `ENOENT`, `EISDIR`, or \
@@ -298,9 +300,9 @@ def render_repl_system_prompt(
     """
     if files_attached:
         sandbox_line = (
-            "- Runtime sandbox: no network or stdlib APIs (`fetch`, `require`, "
-            "`process` are unavailable). `Date` reads the real clock in UTC. Files "
-            "are reachable through `fs`, documented below."
+            "- Runtime sandbox: no network or stdlib APIs (`fetch`, `process` are "
+            "unavailable). `Date` reads the real clock in UTC. Files are reachable "
+            "through `fs`, documented below."
         )
     else:
         sandbox_line = (
