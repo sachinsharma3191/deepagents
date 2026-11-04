@@ -2,6 +2,21 @@
 
 # Deep Agents Changelog
 
+## [0.7.33](https://github.com/langchain-ai/deepagents/compare/deepagents==0.7.32...deepagents==0.7.33) (2026-11-04)
+
+
+### Features
+
+* **sdk:** add notification metadata to async subagent notifications ([#7334](https://github.com/langchain-ai/deepagents/issues/7334)) ([6b9e9c9](https://github.com/langchain-ai/deepagents/commit/6b9e9c9f9088deab6d1c3f12c3c9626605d803a2))
+* **sdk:** record the `task` call id on subagent checkpoints ([#7509](https://github.com/langchain-ai/deepagents/issues/7509)) ([213f034](https://github.com/langchain-ai/deepagents/commit/213f0345fbd2dc1b09b9595028df9cc8682cc270))
+
+
+### Bug Fixes
+
+* **sdk:** promote rubric middleware out of beta ([#7368](https://github.com/langchain-ai/deepagents/issues/7368)) ([98773a7](https://github.com/langchain-ai/deepagents/commit/98773a73843421f85a2113e6c3b0262f53d9bcd6))
+* **sdk:** report failed compaction with error status ([#7538](https://github.com/langchain-ai/deepagents/issues/7538)) ([2c11c92](https://github.com/langchain-ai/deepagents/commit/2c11c92ee2f47e4ce62e7e6510a77b0f2ad6b638))
+* **sdk:** restrict Python grep fallback to the requested file ([#7539](https://github.com/langchain-ai/deepagents/issues/7539)) ([3a0c7bb](https://github.com/langchain-ai/deepagents/commit/3a0c7bb935fefb5d283f0799ef4551add6c2a361))
+
 ## [0.7.32](https://github.com/langchain-ai/deepagents/compare/deepagents==0.7.31...deepagents==0.7.32) (2026-10-23)
 
 ### Performance Improvements
